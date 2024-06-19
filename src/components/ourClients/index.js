@@ -24,7 +24,6 @@ const OurClients = () => {
         <div className="si-main__container">
           <div className="si-ourClients__grid">
             {ourClientsArr.map((item, index) => {
-              console.log(item);
               return (
                 <div key={index} className="si-ourClients__grid-item">
                   <div className="si-ourClients__thumb">

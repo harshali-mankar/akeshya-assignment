@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="si-main__container">
           <div className="si-footer__grid">
             <div className="si-footer__copyright">
-              <i class="ri-copyright-line"></i> Copyright <b>Akeshya</b>. All
-              Rights Reserved
+              <i className="ri-copyright-line"></i> Copyright <b>Akeshya</b>.
+              All Rights Reserved
             </div>
             <div className="si-footer__sitemap">
               <Anchor

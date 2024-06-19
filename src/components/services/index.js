@@ -34,7 +34,7 @@ const servicesArr = [
 const Services = () => {
   return (
     <>
-      <section className="si-services__wrap si-section__wrap">
+      <section id="services" className="si-services__wrap si-section__wrap">
         <div className="si-main__container">
           <SectionHeading heading="SERVICES" />
           <SectionCaption content="Akeshya will serve as your consultant and development partner to help you turn your idea into a reality." />
@@ -47,7 +47,7 @@ const Services = () => {
                 component={
                   <>
                     <div className="si-services__box-icon">
-                      <i class={item.icon}></i>
+                      <i className={item.icon}></i>
                     </div>
                     <h3 className="si-services__box-title">{item.title}</h3>
                     <p className="si-services__box-content">{item.content}</p>
