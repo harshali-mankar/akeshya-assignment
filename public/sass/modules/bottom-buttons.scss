@@ -1,0 +1,71 @@
+.si-bottomBtns{
+    @extend %si-fb; 
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    z-index: 3;
+    position: relative;
+    .si-gplyBtn{
+        @extend %si-fb; 
+        min-width: 123px;
+        height: 36px;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 7.5px;
+        color: $neutral-2;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: $border-radius-10;
+        font-weight: $bold-fw;
+        cursor: pointer;
+        border: 1px solid rgba($neutral-2, 0.4);
+        i{
+            margin-right: 5px;           
+                color: $neutral-2;
+                font-size: 14px;
+    vertical-align: bottom;
+            
+        }
+        &.si-wrong{ 
+            background-color: rgba($incorrect, 1);
+            border-color: rgba($incorrect, 1);
+        } 
+        &.si-notPredicted{
+            background-color: rgba($primary, 1);
+            border-color: rgba($primary, 1); 
+        }
+        &.si-correct{
+            background-color: rgba($correct, 1);
+            border-color: rgba($correct, 1);
+        }
+    }
+    .si-ptsBtn{
+        b{
+            margin: 0 5px;
+            font-size: 16px;
+            font-weight: $medium-fw;
+        }
+    }
+    .si-jockerBtn{
+        border-color: $primary;
+        color: $primary;
+        i{
+            color: $primary;
+        }
+        &Active{
+            background-color: $secondary-3;
+            color: $neutral-3;
+            i{
+                color: $neutral-3;
+            }
+
+        }
+
+
+
+
+    }
+
+}
+

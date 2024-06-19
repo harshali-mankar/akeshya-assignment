@@ -1,0 +1,175 @@
+.si-btnYn{
+    width: 82px;
+    height: 82px;
+    @extend %si-fb;  
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: relative;
+    text-transform: uppercase;
+    color:  $quinary;
+    font-family: $black-ff;
+    font-weight: $black-fw; 
+    font-size: 24px;
+    &.si-active{
+        &:after{
+            background-color: $quinary;
+        }
+        color: $tertiary;
+    }
+    span{
+        position: relative;
+        z-index: 3;
+    }
+    // &::before{
+    //     content: "";
+    //     width: 92px;
+    //     height: 92px;
+    //     background-color: #4a3e59;
+    //     border-radius: 100%;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     @include transform(translateX(-50%) translateY(-50%));
+    //     z-index: 0;
+    // }
+    &::after{
+        content: "";
+        width: 82px;
+        height: 82px;
+        background-color: $primary-1;
+        border: 2.35px solid $quinary;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translateX(-50%) translateY(-50%));
+        z-index: 1;
+        
+    }
+    &Wrp{
+        width: 228px;
+        height: 92px;
+        border-radius: 92px;
+        margin: auto;
+        @extend %si-fb;  
+        justify-content: space-between;
+        align-items: center;
+        padding: 5.88px;
+        background: url(../images/svg/yes_no_bg.svg?v=#{$image-version}) no-repeat center;
+        background-size: contain;
+
+        
+        .si-or{
+            position: relative;
+            // background-color: #4a3e59;
+            flex: 1;
+            height: 60px;
+            margin: -10px;
+            text-align: center;
+            @extend %si-fb;  
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: $neutral-2;
+            font-size: 14px;
+
+            // &::before{
+            //     content: "";
+            //     width: 82.1px;
+            //     height: 82.1px;
+            //     background-color: $theme-color-2;
+            //     border-radius: 100%;
+            //     position: absolute;
+            //     top: -67px;
+            //     left: 50%;
+            //     @include transform(translateX(-50%));
+            //     z-index: 2;
+            //     margin-left: -0.1px;
+
+            // }
+            // &::after{
+            //     content: "";
+            //     width: 82.1px;
+            //     height: 82.1px;
+            //     background-color: $theme-color-2;
+            //     border-radius: 100%;
+            //     position: absolute;
+            //     bottom: -67px;
+            //     left: 50%;
+            //     @include transform(translateX(-50%));
+            //     z-index: 2;
+            //     margin-left: -0.1px;
+            // }
+        }
+
+
+
+        &.si-live{
+            justify-content: center;
+            background: none;
+            .si-or{
+                display: none;
+            }
+            .si-btnYn{
+                &::before{
+                    display: none;
+                }
+                &:not(.si-active){
+                    display: none;
+                }
+            }
+
+        }   
+        &.si-notSelected{
+            .si-btnYn,.si-or,.si-btnYn {
+                display: flex!important;
+            }
+            &.si-btnYnWrp{
+                background: url(../images/svg/yes_no_bg.svg?v=0.6) no-repeat center;
+            }
+        }
+        &.si-wrong{
+            width: 200px;
+            background: none;
+            .si-or{
+                display: none;
+            }
+            .si-btnYn{
+                &.si-correctAns{
+                    color: $neutral-2;
+                    &::after{
+                        background-color: $correct;
+                        border-color: transparent;
+                    }
+                    
+                }
+                &::before{
+                    display: none;
+                }
+                &Wrp{
+
+                }
+     
+            }
+        }
+        &.si-correct{
+            justify-content: center;
+            background: none;
+            .si-or{
+                display: none;
+            }
+            .si-btnYn{
+                &::before{
+                    display: none;
+                }
+                &:not(.si-active){
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+
+}

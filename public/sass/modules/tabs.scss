@@ -1,0 +1,43 @@
+.si-tabs{
+
+   
+    text-align: center;
+    padding:0 $gutter15;
+    margin-top:$gutter16;
+    &Wrp{
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid rgba($neutral-2,0.4);
+        border-radius: $border-radius-10;
+        background-color: $primary;
+        white-space: nowrap;
+        font-family: $medium-ff-2;
+        font-weight: $bold-fw; 
+        font-size: 13px;
+        line-height: 15px;
+        color: $neutral-2;
+        overflow: hidden;
+
+        a{
+            height: 38px;
+            display: inline-block;
+            min-width: 127px;
+            padding: $gutter10 $gutter24;
+            // border-radius: $border-radius-10;
+            border: 1px solid $transparent;
+            @include transition(all 0.3s);
+            cursor: pointer;
+            color: $neutral-2;
+            &.si-active{
+                background-color: $neutral-3; 
+                border-color:  $theme-color-1;
+                color: $neutral-2;
+                cursor: default;
+                
+            }
+    
+        }
+    }
+
+ 
+}

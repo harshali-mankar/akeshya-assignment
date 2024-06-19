@@ -1,0 +1,609 @@
+* {
+  margin: 0;
+  padding: 0;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  -webkit-backface-visibility: hidden;
+  @include box-sizing(border-box);
+
+  @media screen and (min-width: $media-mobile-max) {
+    // For firefox browser
+    scrollbar-width: thin;
+    scrollbar-color: $neutral-2 $neutral-3;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $neutral-3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $neutral-2;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $neutral-2;
+    }
+  }
+}
+
+body {
+  position: relative;
+  overflow-x: hidden !important;
+  touch-action: manipulation;
+
+  &.si-ar {
+    direction: rtl;
+  }
+  &.si-bodynoscroll {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  font-size: $base-font-size !important;
+  /* Needed for container's min-height  */
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+.si-main {
+  position: relative;
+  // background-color: $neutral-2;
+  line-height: normal;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: $regular-ff, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: $neutral-3;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  backface-visibility: hidden;
+  font-variant-ligatures: no-common-ligatures;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  // background: #29144D;
+  &:before {
+    content: ""; 
+    position: fixed;
+    background: url(../images/main-bg.png?v=#{$image-version}) no-repeat bottom center $primary;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  b,
+  strong {
+    font-family: $bold-ff;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+      font-size: 1.6rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      @include placeholder {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    @include placeholder {
+      color: $transparent;
+      box-shadow: none;
+    }
+  }
+
+  input,
+  textarea {
+    @include placeholder {
+      color: $neutral-3;
+      outline: none;
+      box-shadow: none;
+      font-family: $regular-ff;
+    }
+  }
+
+  :focus {
+    outline: 1px solid $transparent;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @include box-sizing(border-box);
+    -webkit-tap-highlight-color: $transparent;
+    outline: 0;
+    -webkit-tap-highlight-color: none;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+  }
+}
+
+.si-main {
+  &__wrap {
+    position: relative;
+  }
+
+  &__container {
+    margin: 0 auto;
+
+    @media screen and (min-width: $media-desktop-min) {
+      max-width: 375px;
+    }
+  }
+}
+.si-btn {
+  // min-height: 80px;
+  min-height: 38px;
+  border-radius: $border-radius-10;
+  @extend %si-fb;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: $bold-ff-2;
+  font-weight: $bold-fw;
+  color: $tertiary;
+  padding: $gutter10 $gutter15;
+  white-space: nowrap;
+  // margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 16px;
+  // @media screen and (max-width: 360px) {
+  //   padding: $gutter10 $gutter15;
+  // }
+  &-wrp {
+    @extend %si-fb;
+
+    .si-btn {
+      flex: 1;
+      margin: 0 7.5px 5px 7.5px;
+    }
+  }
+  &__primary {
+    background-color: $primary-3;
+    border: 1px solid rgba($neutral-2, 0.4);
+    color: $neutral-2;
+    
+  }
+  &__secondary {
+    border: 1px solid $primary-3;
+    color: $primary-3;
+  }
+  &__tertiary {
+    &Icon {
+      color: $quinary;
+      margin-bottom: 0;
+      i {
+        @include transform(rotate(180deg));
+        font-size: 14px;
+        margin-left: 10px;
+        color: $quinary;
+      }
+    }
+  }
+}
+
+/* modal*/
+
+//pop-ups
+.si-pp {
+  background-color: $neutral-2;
+  // border: 1px solid rgba(239, 239, 239, 0.3);
+  border-radius: calc($border-radius-30 - 15px);
+  color: $neutral-3;
+  max-height: calc(100vh - 40px);
+  max-width: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: $gutter20;
+  width: 100%;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @extend %flexbox;
+  @include transform(translate(0, -25%) scale(0));
+  @include transition(transform 0.3s ease-in);
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../images/popup-left.png?v=#{$image-version}) no-repeat right bottom;
+    // transform: scaleX(-1);
+    background-size: contain;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../images/popup-right.png?v=#{$image-version}) no-repeat left bottom;
+    // transform: scaleX(-1);
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    width: 45%; 
+    height: 100%;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  @media screen and (max-width: $media-mobile-sm-max) {
+    padding: 10px;
+  }
+
+  &-wrp {
+    z-index: -9999;
+    position: fixed;
+    // position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // max-width: 500px;
+    width: 100%;
+    height: 100%;
+    padding: 0 $gutter20;
+    overflow: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    @extend %flexbox;
+
+    @media screen and (min-width: $media-desktop-min) {
+      max-width: 100%;
+    }
+    @media screen and (max-width: $media-mobile-sm-max) {
+      padding: 0 15px;
+    }
+  }
+
+  &Head {
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: $primary-2;
+      opacity: 0.2;
+    }
+    &Txt {
+      font-size: 22px;
+      line-height: 26px;
+      color: $primary;
+      font-weight: $bold-fw;
+    }
+    .si-close {
+      position: absolute;
+      top: -15px;
+      left: auto;
+      right: -15px;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+      justify-content: center;
+      align-items: center;
+      @extend %flexbox;
+      font-size: 16px;
+      color: $neutral-2;
+    }
+  }
+
+  &Body {
+    max-height: calc(100vh - 60px);
+    -webkit-overflow-scrolling: touch;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary-2;
+    text-align: center;
+    width: 100%;
+  }
+  .si-btn-wrp {
+    margin-top: 15px;
+  }
+}
+//animations transition
+.si-fade {
+  &.in {
+    z-index: 100;
+    background: rgba($neutral-3, 0.6);
+    @include opacity(1);
+    @include transition(opacity 0.1s linear, padding-top 0.1s linear);
+
+    .si-pp {
+      @include animation("si-popInUp .15s both");
+    }
+  }
+
+  &.out {
+    pointer-events: none;
+    @include opacity(0);
+    @include transition(si-opacity 0.1s linear, padding-top 0.1s linear);
+
+    .si-pp {
+      @include animation("si-popOutUp .15s both");
+    }
+  }
+
+  &.bg-dark {
+    &.in {
+      background: rgba(var(--black-rgb), 0.8) !important;
+    }
+  }
+}
+
+/* checkbox*/
+
+label {
+  &.si-checkBox {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // visibility: hidden;
+      // opacity: 0;
+      border: 1px solid $neutral-2;
+      border-radius: 100%;
+      @include transition(all 200ms linear);
+      color: $quaternary;
+      font-size: 11px;
+      @extend %si-fb;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        visibility: hidden;
+      }
+    }
+    input[type="checkbox"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      &:checked + i {
+        border-color: $quinary;
+        background-color: $quinary;
+        visibility: visible;
+        opacity: 1;
+        &::before {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &.si-correct {
+    border-color: $correct !important;
+    i {
+      background-color: $correct !important;
+      color: $neutral-2;
+    }
+  }
+  &.si-wrong {
+    border-color: $incorrect !important;
+    i {
+      background-color: $incorrect !important;
+      color: $neutral-2;
+    }
+  }
+}
+
+.si-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* dropdown custom css*/
+.si-dropdown {
+  position: relative;
+  .si-option {
+    border: 1px solid rgba($neutral-2, 0.3);
+    background-color: rgba($quaternary, 0.9);
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    @include transition(all 0.3s);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9;
+
+    .si-option-list {
+      border-top: 1px solid rgba($neutral-2, 0.3);
+      cursor: pointer;
+      &:hover {
+        background-color: rgba($neutral-2, 0.3);
+      }
+      &:first-child {
+        border-top: 0;
+      }
+      &.si-active {
+        background-color: $primary;
+      }
+    }
+    &-selected {
+      height: 36px;
+      min-width: 240px;
+      border-radius: $border-radius-10;
+      background-color: rgba($neutral-2, 0.1);
+      border: 1px solid rgba($neutral-2, 0.3);
+      padding-right: 30px;
+      position: relative;
+      @media screen and (max-width: $media-mobile-sm-max) {
+        min-width: 200px;
+      }
+      &::after {
+        content: $kkr-arrow-type-2;
+        font-family: "#{$icomoon-font-family}" !important;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        font-size: 12px;
+        color: $neutral-2;
+        @include transform(translateY(-50%) rotate(-90deg));
+      }
+    }
+    &-list {
+      height: 36px;
+      padding: 9px 15px;
+      @extend %si-fb;
+      align-items: center;
+      color: $neutral-2;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &.si-active {
+    .si-option {
+      visibility: visible;
+      opacity: 1;
+      top: 37px;
+    }
+
+    .si-option-selected {
+      &:after {
+        @include transform(translateY(-50%) rotate(90deg));
+      }
+    }
+  }
+}
+
+/* loader */
+.si-loader {
+  position: fixed;
+  background-color: rgba($neutral-3, 0.6);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  @extend %si-fb;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+// .si-loader:after {
+//   content: "";
+//   border: 8px solid #f3f3f3;
+//   border-radius: 50%;
+//   border-top: 8px solid $quinary;
+//   width: 60px;
+//   height: 60px;
+//   -webkit-animation: spin 1s linear infinite;
+//   animation: spin 1s linear infinite;
+// }
+
+.si-hidden {
+  display: none;
+}
+.si-vhidden {
+  visibility: hidden;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// waf
+.grecaptcha-badge {
+  visibility: hidden;
+}

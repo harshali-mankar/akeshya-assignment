@@ -1,0 +1,199 @@
+.rs-range{
+    stroke: $senary
+}
+
+.rs-container{
+    position: relative;
+    .si-scoreTxt{
+        &Wrp{
+                position: absolute;
+                width: 112px;
+                height: 75px;
+                @extend %si-fb;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                z-index: 9;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                label{
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: $semi-bold-fw;
+                    color: $neutral-2;
+                    padding-top: 10px;
+                    margin-bottom: -10px;
+                    &.si-vhidden{
+                        visibility: hidden;
+                    }
+                }
+        }
+    
+        @extend %si-fb;
+        align-items: center;
+        justify-content: center;
+        margin-top: 17px;
+        z-index: 3;
+        color: $neutral-2;
+        span{
+            min-width: 83px;
+            max-width: 100px;
+            height: 40px;
+            margin: 0 7.5px;
+            border-radius: 5px;
+            @extend %si-fb;
+            align-items: center;
+            justify-content: center;
+            background: rgba($primary-1, 0.6); 
+            backdrop-filter: blur(5px);
+            font-size: 25px;
+            line-height: 30px;
+            font-family: $bold-ff-2;
+            font-weight: $bold-fw;
+            &.si-correctAns{
+                background-color: $correct;
+            }
+        }
+
+    }
+}
+.rs-inner{
+    &Value{
+        position: absolute;
+        margin: auto;
+        top: -40px;
+        left: 50%;
+        @include transform(translateX(-50%));
+        span{
+            color: $neutral;
+            border: 1px solid rgba($neutral-2, 0.3);
+            display: inline-block;
+            height: 30px;
+            padding:7px 16px;
+            border-radius: 30px;
+            font-size: 10px;
+            line-height: 13px;
+            
+        }
+    }
+    &-container {
+        height: 170px;
+        width: 170px;
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        margin-top: 60px;
+        svg{
+            position: relative;
+            z-index: 1;
+            
+            path:nth-child(1){
+                fill: none;
+                stroke:  rgba($secondary-2, 0.2); 
+                
+                stroke-width: 4px;
+                
+            }
+            path:nth-child(2){
+                fill: none;
+                stroke:  $secondary;
+                stroke-width: 4px;
+                 
+            }
+            circle{
+                fill: $secondary-2;
+                position: relative;
+                -webkit-animation: linear infinite;
+                -webkit-animation-name: run;
+                -webkit-animation-duration: 2s;
+                transform-origin: 0 0;
+                stroke:  $senary;
+                stroke-width: 4px;
+
+             
+            }
+        }
+        &:before{
+            content: "";
+            width: 118px;
+            height: 118px;
+            border-radius: 100%;
+            background: url(../images/svg/pitch.svg) no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translateX(-50%) translateY(-50%))
+        }
+
+        &.si-wrong, &.si-correct, &.si-live{
+             svg {
+                path:nth-child(2){
+                    // stroke: rgba(255,255,255,.1);
+                    stroke:  $secondary;
+            
+                }
+                circle{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.full .rs-bar, .half.left .rs-bar, .half.right .rs-bar {
+    top: 50%;
+}
+.full .rs-bar, .half .rs-bar {
+    width: 50%;
+}
+.rs-handle{
+    height: 18px;
+    width: 18px;
+    margin: -9px 0px 0px -1px;
+    background-color: $quinary;
+    border-radius: 100%;
+    cursor: move;
+    font-size: 10px;
+    line-height: 12px;
+    @extend %si-fb;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        display: inline-block;
+        @include transform(rotate(90deg))
+    }
+
+}
+.rs-animation .rs-transition {
+    -webkit-transition: all .5s linear 0s;
+    -moz-transition: all .5s linear 0s;
+    -o-transition: all .5s linear 0s;
+    transition: all .5s linear 0s;
+}
+.rs-bar {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    z-index: 10;
+}
+.rs-bar {
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+
+
+@-webkit-keyframes run {
+    0% {
+        stroke-width: 0px;
+    }
+    100% {
+        stroke-width: 4px;
+    }
+  }

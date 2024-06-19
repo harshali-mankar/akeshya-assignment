@@ -1,0 +1,164 @@
+// @import "variables";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?v=#{$cache}");
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?v=#{$cache}")
+      format("embedded-opentype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?v=#{$cache}")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?v=#{$cache}")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?v=#{$cache}##{$icomoon-font-family}")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+ 
+[class^="kkr-"],
+[class*=" kkr-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kkr-close {
+  &:before {
+    content: $kkr-close; 
+  }
+}
+.kkr-lock1 {
+  &:before {
+    content: $kkr-lock1;
+  }
+}
+.kkr-wrong {
+  &:before {
+    content: $kkr-wrong;
+  }
+}
+.kkr-lock {
+  &:before {
+    content: $kkr-lock;
+  }
+}
+.kkr-equal {
+  &:before {
+    content: $kkr-equal;
+  }
+}
+.kkr-cup {
+  &:before {
+    content: $kkr-cup;
+  }
+}
+.kkr-arrow-heigh {
+  &:before {
+    content: $kkr-arrow-heigh;
+  }
+}
+.kkr-arrow-low {
+  &:before {
+    content: $kkr-arrow-low;
+  }
+}
+.kkr-tick {
+  &:before {
+    content: $kkr-tick;
+  }
+}
+.kkr-jocker {
+  &:before {
+    content: $kkr-jocker;
+  }
+}
+.kkr-arrow-type-2 {
+  &:before {
+    content: $kkr-arrow-type-2;
+  }
+}
+.kkr-arrow-type-1 {
+  &:before {
+    content: $kkr-arrow-type-1;
+  }
+}
+.kkr-info {
+  &:before {
+    content: $kkr-info;
+  }
+}
+.kkr-pop-up-close {
+  &:before {
+    content: $kkr-pop-up-close;
+  }
+}
+.kkr-ball {
+  &:before {
+    content: $kkr-ball;
+  }
+}
+.kkr-catch {
+  &:before {
+    content: $kkr-catch;
+  }
+}
+.kkr-hundred {
+  &:before {
+    content: $kkr-hundred;
+  }
+}
+.kkr-fifry {
+  &:before {
+    content: $kkr-fifry;
+  }
+}
+.kkr-run {
+  &:before {
+    content: $kkr-run;
+  }
+}
+.kkr-third-umpire {
+  &:before {
+    content: $kkr-third-umpire;
+  }
+}
+.kkr-leg-bye {
+  &:before {
+    content: $kkr-leg-bye;
+  }
+}
+.kkr-no-ball {
+  &:before {
+    content: $kkr-no-ball;
+  }
+}
+.kkr-wide {
+  &:before {
+    content: $kkr-wide;
+  }
+}
+.kkr-wickets {
+  &:before {
+    content: $kkr-wickets;
+  }
+}
+.kkr-six {
+  &:before {
+    content: $kkr-six;
+  }
+}
+.kkr-four {
+  &:before {
+    content: $kkr-four;
+  }
+}

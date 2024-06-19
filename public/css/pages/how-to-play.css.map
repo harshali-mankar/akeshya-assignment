@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/how-to-play.scss"],"names":[],"mappings":"AACI,YACI,MAAA,KACA,OAAA","file":"how-to-play.css","sourcesContent":[".si-htp{\r\n    &Icon{\r\n        width: 83px;\r\n        height: 83px;\r\n    }\r\n}"]}

@@ -1,0 +1,156 @@
+// $font-icon: "waf-font-icon";
+$image-version: "1.4";
+$cache: "1.4";
+
+$icomoon-font-family: "kkr" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$kkr-close: "\e919";
+$kkr-lock1: "\e918";
+$kkr-wrong: "\e917";
+$kkr-lock: "\e916";
+$kkr-equal: "\e915";
+$kkr-cup: "\e900";
+$kkr-arrow-heigh: "\e901";
+$kkr-arrow-low: "\e902";
+$kkr-tick: "\e903";
+$kkr-jocker: "\e904";
+$kkr-arrow-type-2: "\e905";
+$kkr-arrow-type-1: "\e906";
+$kkr-info: "\e907"; 
+$kkr-pop-up-close: "\e908";
+$kkr-ball: "\e909";
+$kkr-catch: "\e90a";
+$kkr-hundred: "\e90b";
+$kkr-fifry: "\e90c";
+$kkr-run: "\e90d";
+$kkr-third-umpire: "\e90e";
+$kkr-leg-bye: "\e90f";
+$kkr-no-ball: "\e910";
+$kkr-wide: "\e911";
+$kkr-wickets: "\e912";
+$kkr-six: "\e913";
+$kkr-four: "\e914";
+
+$transparent: transparent;
+$googlePlus: hsl(7, 71%, 55%);
+$facebook: hsl(214, 90%, 53%);
+$twitter: hsl(198, 75%, 53%);
+$whatsApp: hsl(131, 69%, 48%);
+$instagram: hsl(205, 77%, 30%);
+
+//client common color
+$primary-hot-red: hsl(2, 100%, 44%);
+$primary-carbon-black: hsl(240, 18%, 10%);
+$primary-warm-white: hsl(30, 27%, 96%);
+
+
+$black: hsl(0, 0%, 0%);
+$gray: hsla(0, 0%, 94%, 1);
+
+$correct: hsl(119, 80%, 40%);
+$incorrect: hsl(355, 92%, 43%);
+
+$live: hsla(40, 100%, 59%, 1);
+$selected: hsla(40, 100%, 59%, 1);
+
+//status
+$upcoming: hsl(357, 82%, 51%);
+$result: #E7E6EA;
+$live: hsl(119, 80%, 40%);
+$locked: hsl(40, 100%, 59%);
+$completed: hsl(0, 0%, 5%,);
+$women: #fc0298; 
+
+
+// all variables
+$base-font-size: 62.5%;
+$vh: 1vh;
+// $window-inner-height: calc($vh, 1vh * 100);
+$full-space: 1.6rem;
+$half-space: 0.8rem;
+$full-space-negative: calc($full-space * -1);
+$half-space-negative: calc($half-space * -1);
+$border-radius-30: 3rem;
+$border-radius-12: 1.2rem;
+$border-radius-2: 0.13rem;
+$border-radius-10: 1rem;
+$border-radius: 1.5rem;
+$border-radius-3: 0.3rem;
+$border-radius-100: 6.25rem;
+$half-border-radius: 0.75rem;
+
+// gutter-space
+$gutter16: 16px;
+$gutter22: 22px;
+$gutter20: 20px;
+$gutter24: 24px;
+$gutter10: 10px;
+$gutter15: 15px;
+$gutter5: 5px;
+$gutter4: 4px;
+$gutter2: 2px;
+$gutter8: 8px;
+
+$negative-gutter16: calc($gutter16 * -1);
+$negative-gutter24: calc($gutter24 * -1);
+
+
+
+
+// client colors
+$primary: hsla(352, 76%, 24%, 1);
+$primary-1: hsla(350, 61%, 15%, 1);
+$primary-2:hsla(0, 0%, 4%, 1);
+$primary-3: hsla(355, 100%, 38%, 1);
+
+$primary-gradient-bt: linear-gradient(180deg, #090909 0%, #6C0F1C 100%);
+$primary-gradient-tb: linear-gradient(180deg, #6C0F1C 0%, #090909 100%);
+
+$secondary: hsla(355, 98%, 42%, 1);
+$secondary-2: hsla(40, 100%, 59%, 1);
+$secondary-3: hsla(45, 89%, 55%, 1);
+
+$neutral: hsla(0, 0%, 94%, 1);
+$neutral-2: hsla(0, 0%, 100%, 1);
+$neutral-3: hsla(0, 0%, 0%, 1);
+
+$tertiary: hsla(273, 73%, 19%);
+$quaternary: hsla(264, 29%, 7%);
+$quinary: hsla(45, 89%, 55%);
+$senary: hsla(45, 84%, 42%);
+$theme-color-1: hsla(0, 0%, 4%, 1);
+$theme-color-2: hsla(267, 54%, 12%, 1);
+
+$aspect-ratio-graphic: 4.9/1;
+$matchBanner: 111px;
+$nav: 38px;
+$matchBannerAndNav: $matchBanner + $nav;
+
+// mobile ex-small
+$media-mobile-ex-sm-min: 320px;
+$media-mobile-ex-sm-max: 321.98px;
+
+// mobile small
+$media-mobile-sm-min: 375px;
+$media-mobile-sm-max: 374.98px;
+
+// mobile
+$media-mobile-min: 576px;
+$media-mobile-max: 575.98px;
+
+// tablets
+$media-tablets-min: 768px;
+$media-tablets-max: 767.98px;
+
+// desktop
+$media-desktop-min: 1024px;
+$media-desktop-max: 991.98px;
+
+// lg-desktop
+$media-lg-desktop-min: 1360px;
+// $media-lg-desktop-max: 1199.98px;
+
+// extra lg-desktop
+$media-xlg-desktop-min: 1400px;
+$media-xlg-desktop-max: 1399.98px;

@@ -1,0 +1,297 @@
+.si-buttonSlider{
+    margin: 0 30px;
+    // width: 100%;
+    -webkit-mask-image: linear-gradient(to right,transparent 0%,#000 50%,transparent 100%);
+    mask-image: linear-gradient(to right,transparent 0%,#000 50%,transparent 100%);
+
+    
+    .swiper-slide{
+        padding: 8px 16px;
+        height: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba($neutral-2, 0.3);
+        color: $neutral-2;
+        text-align: center;
+        font-size: 10px;
+        white-space: nowrap;
+        cursor: default;
+        &.si-active{
+            background-color: rgba($neutral-2, 0.2);
+            
+        }
+    }
+}
+
+.si-score{
+    &Range{
+        height: 142px;
+        margin: 15px 0 5px 0;
+        text-align: center;
+        position: relative;
+        
+        .si-scoreTxt{
+            &Wrp{
+                    width: 100px;
+                    height: 75px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    @extend %si-fb;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    z-index: 2;
+                    label{
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-weight: $semi-bold-fw; 
+                        color: $neutral-2;
+                        padding-top: 15px;
+                        margin-bottom: -10px;
+                        &.si-vhidden{
+                            visibility: hidden;
+                        }
+                    }
+            }
+          
+            @extend %si-fb;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            z-index: 3;
+            color: $neutral-2;
+            span{
+                width: 100px;
+                height: 40px;
+                
+                border-radius: 5px;
+                @extend %si-fb;
+                align-items: center;
+                justify-content: center;
+                background: rgba($primary-1, 0.6); 
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                font-size: 25px;
+                line-height: 30px;
+                font-family: $bold-ff-2;
+                font-weight: $bold-fw;
+                &:nth-child(2){
+                    margin-left: 15px; 
+                }
+                &.si-correctAns{
+                    background-color: $correct;
+                }
+            }
+    
+        }
+    }
+
+    &Graph{
+        width: 142px;
+        height: 142px;
+        background-color: rgba($secondary-2, 0.2);
+        border-radius: 100%;
+        @extend %si-fb;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        // IOS issue fix
+        transform: translateZ(0);
+        will-change: transform;
+        .si-dot{
+            width: 8px; 
+            height: 8px;
+            border-radius: 100%;
+            background-color: $secondary;
+            border: 1px solid $secondary;
+            position: absolute;
+            left: 99px;
+            top: 11px;
+            // opacity: 0.5;
+            &-wrp{
+                width: 142px;
+                height: 142px;
+                position: absolute;
+                top: -7px;
+                left: -7px;            
+                width: 100%;
+                height: 100%;
+
+            }
+
+            &-1{
+                left: 99px;
+                top: 14px;
+            }
+            &-2{
+                left: 134px;
+                top:49px
+            }
+            &-3{
+                left: 134px;
+                top:98px
+            }
+            &-4{
+                left: 100px;
+                top:134px
+            }
+            &-5{
+                left: 49px;
+                top:134px
+            }
+            &-6{
+                left: 14px;
+                top:99px
+            }
+            &-7{
+                left: 14px;
+                top: 50px
+            }
+            &-8{
+                left: 49px;
+                top:14px
+            }
+
+        }
+        &.si-active-5{ 
+            .si-dot-1{
+                top: 21px;
+                left: 112px;
+                
+            }
+            .si-dot-2{
+                top: 94px;
+                left: 136px;
+                
+            }
+            .si-dot-3{
+                top: 139px;
+                left: 74px;
+                
+            }
+            .si-dot-4{
+                top: 94px;
+                left: 12px;
+                
+            }
+            .si-dot-5{
+                top: 21px;
+                left: 36px;
+                
+            }
+            .si-highlight{
+                
+                &-1{
+                    @include transform(translateY(-100%) rotate(0) skewY(-17deg));
+                }
+                &-2{
+                    @include transform(translateY(-100%) rotate(72deg) skewY(-17deg));
+                }
+                &-3{
+                    @include transform(translateY(-100%) rotate(144deg) skewY(-17deg));
+                }
+                &-4{
+                    @include transform(translateY(-100%) rotate(215deg) skewY(-17deg));
+                   }
+                &-5{
+                    @include transform(translateY(-100%) rotate(287deg) skewY(-17deg));
+                    }
+            }
+            .si-dot-6,.si-dot-7,.si-dot-8,.si-highlight-6,.si-highlight-7,.si-highlight-8{
+                display: none;
+            }
+        }
+
+
+    }
+    &Pitch{
+        width: 118px;
+        height: 118px;
+        border-radius: 100%;
+        background: url(../images/svg/pitch.svg?v=#{$image-version}) no-repeat;
+        background-size: cover;
+        position: relative;
+        @extend %si-fb;
+        align-items: center;
+        justify-content: center;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 78px;
+            height: 78px;
+            top: 50%;
+            left: 50%;
+            opacity:0.7;
+            background-color:#18521B;
+            border-radius: 100%;
+            @include transform( translateY(-50% ) translateX(-50%));
+            z-index: 1;
+        }
+        .si-highlight{
+            width: 10em;
+            height: 8.66025em;
+            overflow: hidden;
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0 100%;
+            opacity: 0;
+            // visibility: hidden;
+            @include transition(all 0.3s);
+            &::before{
+                content: '';
+                position: absolute;
+                top: 25%;
+                left: 25%;
+                box-sizing: border-box;
+                width: 10em;
+                height: 8.66025em;
+                background: orange;
+                @include transform(translateY(12%) rotate(82deg) skewY(8deg));
+                transform-origin: 50% 0%;
+            }
+            &.si-active{
+                opacity: 1;
+                // visibility: visible;
+               
+            }
+            &-1{
+                @include transform(translateY(-100%) rotate(0) skewY(-45deg));
+
+                
+
+            }
+            &-2{
+                @include transform(translateY(-100%) rotate(45deg) skewY(-45deg));
+            }
+            &-3{
+                @include transform(translateY(-100%) rotate(90deg) skewY(-38deg));
+            }
+            &-4{
+                @include transform(translateY(-100%) rotate(135deg) skewY(-45deg));
+            }
+            &-5{
+                @include transform(translateY(-100%) rotate(180deg) skewY(-45deg));
+            }
+            &-6{
+                @include transform(translateY(-100%) rotate(225deg) skewY(-45deg));
+            }
+            &-7{
+                @include transform(translateY(-100%) rotate(270deg) skewY(-45deg));
+            }
+            &-8{
+                @include transform(translateY(-100%) rotate(315deg) skewY(-45deg));
+            }
+
+        }
+
+    }
+
+}

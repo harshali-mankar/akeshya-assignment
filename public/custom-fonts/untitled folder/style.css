@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'kkr';
+  src:  url('fonts/kkr.eot?qy5rca');
+  src:  url('fonts/kkr.eot?qy5rca#iefix') format('embedded-opentype'),
+    url('fonts/kkr.ttf?qy5rca') format('truetype'),
+    url('fonts/kkr.woff?qy5rca') format('woff'),
+    url('fonts/kkr.svg?qy5rca#kkr') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="kkr-"], [class*=" kkr-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kkr' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kkr-lock1:before {
+  content: "\e918";
+}
+.kkr-wrong:before {
+  content: "\e917";
+}
+.kkr-lock:before {
+  content: "\e916";
+}
+.kkr-equal:before {
+  content: "\e915";
+}
+.kkr-cup:before {
+  content: "\e900";
+}
+.kkr-arrow-heigh:before {
+  content: "\e901";
+}
+.kkr-arrow-low:before {
+  content: "\e902";
+}
+.kkr-tick:before {
+  content: "\e903";
+}
+.kkr-jocker:before {
+  content: "\e904";
+}
+.kkr-arrow-type-2:before {
+  content: "\e905";
+}
+.kkr-arrow-type-1:before {
+  content: "\e906";
+}
+.kkr-info:before {
+  content: "\e907";
+}
+.kkr-pop-up-close:before {
+  content: "\e908";
+}
+.kkr-ball:before {
+  content: "\e909";
+}
+.kkr-catch:before {
+  content: "\e90a";
+}
+.kkr-hundred:before {
+  content: "\e90b";
+}
+.kkr-fifry:before {
+  content: "\e90c";
+}
+.kkr-run:before {
+  content: "\e90d";
+}
+.kkr-third-umpire:before {
+  content: "\e90e";
+}
+.kkr-leg-bye:before {
+  content: "\e90f";
+}
+.kkr-no-ball:before {
+  content: "\e910";
+}
+.kkr-wide:before {
+  content: "\e911";
+}
+.kkr-wickets:before {
+  content: "\e912";
+}
+.kkr-six:before {
+  content: "\e913";
+}
+.kkr-four:before {
+  content: "\e914";
+}

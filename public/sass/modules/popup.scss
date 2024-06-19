@@ -1,0 +1,83 @@
+.si-tmLft {
+  @extend %si-fb;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+  span {
+    &:first-child {
+      font-size: 13px;
+    }
+    &:nth-child(2) {
+      min-width: 82px;
+      padding: 0 15px;
+      height: 37px;
+      background-color: $primary-2;
+      color: $neutral-2;
+      border-radius: $border-radius-2;
+      @extend %si-fb;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin: 10px auto auto auto;
+
+      b {
+        font-weight: $bold-fw;
+      }
+    }
+  }
+}
+
+.si-pp {
+  &--predictions {
+    .si-ppBody {
+      overflow: initial; 
+    }
+    .si-pp--info {
+      background: $primary;
+      color: $neutral-2;
+      font-size: 12px;
+      margin: 0 -20px;
+      padding: 7px;
+      @extend %si-fb;
+      flex-direction: column;
+      &Conditional {
+        color: $secondary-2;
+        font-weight: $bold-fw;
+      }  
+    }
+    @media screen and (max-width: $media-mobile-sm-max) {
+      .si-btn{
+        font-size: 10px;
+      }
+    }
+
+    .si-matchesComLft {
+      padding-bottom: 20px;
+      // margin-bottom: 20px;
+      position: relative;
+     
+      span {
+        font-size: 24px;
+        justify-content: center;
+        opacity: 1;
+        color: $primary-2;
+        font-weight: $black-fw;
+      }
+      label {
+        height: 18px;
+        width: 18px;
+      }
+      &.si-wrongAns {
+        label {
+          &::after {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .si-tmLft {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}

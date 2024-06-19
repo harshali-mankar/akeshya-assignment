@@ -1,0 +1,203 @@
+.si-ld{
+    
+    // height: calc(100vh - $matchBannerAndNav);
+    padding: 15px;
+    &Disc{
+        color: $neutral-2;
+        font-size: 12px;
+        line-height: 14.5px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .si-viewbyMatch{
+        @extend %si-fb;
+        justify-content: space-between;
+        align-items: center;
+        label{
+            font-size: 12px;
+            line-height: 14px;
+            color: $neutral-2;
+            @media screen and (max-width: $media-mobile-sm-max) {
+                font-size: 10px;
+            }
+        }
+
+    }
+    .si-vbm-option{
+        @extend %si-fb;
+        justify-content: space-between;
+        @media screen and (max-width: $media-mobile-sm-max) {
+            .si-dateTm{
+                font-size: 8px;
+            }
+           
+                padding: 9px 10px;
+            
+        }
+
+        .si-tmVs{
+            font-size: 14px;
+            line-height: 17px;
+            font-family: $bold-ff-2;
+            font-weight: $semi-bold-fw;
+            @media screen and (max-width: $media-mobile-sm-max) {
+                font-size: 12px;
+            }
+        }
+    }
+    .si-option-selected{
+        &:after{
+            color: $quinary;
+        }
+    }
+}
+
+
+
+.si-ldTbl{
+    
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 -15px;
+    position: relative;
+    &LoaderWrp{
+        justify-content: center;
+        padding-top: 15px;
+        background-color: transparent!important;
+        &.si-active{
+            .si-ldTblLoader{
+                min-width: 125px;
+            }
+        }
+        .si-ldTblLoader{
+            min-width: 105px;
+            min-height: 36px;
+            border: 1px solid $quinary;
+            color: $quinary;
+            border-radius: 36px;
+            font-size: 13px;
+            font-weight: $bold-fw;
+            @extend %si-fb;
+            align-items: center;
+            justify-content: center;
+            &::after{
+                overflow: hidden;
+                display: inline-block;
+                vertical-align: bottom;
+                -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+                animation: ellipsis steps(4, end) 900ms infinite;
+                content: "\2026";
+                /* ascii code for the ellipsis character */
+                width: 0px;
+            }
+        }
+    }
+    &Not{
+        @extend %si-fb;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 150px;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: $neutral-2;
+    }
+    &Img{
+        background: url(../images/svg/no-leaderboard.svg?v=#{$image-version}) bottom center no-repeat;
+        background-size: contain;
+        width:32px;
+        height: 20px;
+        margin-bottom: 15px;
+    } 
+
+    &Row{
+        @extend %si-fb;
+        background-color: $neutral-2;
+        border-top:1px solid $neutral;
+
+        // backdrop-filter: blur(21.5px);
+        &.si-high{
+            .si-rank{
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-bottom: 4px solid $correct;
+                    margin-right: 5px;
+                }
+            }
+
+        }
+        &.si-equal{
+            .si-ldTblCol:first-child{
+                &::before{
+                    font-family: '#{$icomoon-font-family}' !important;
+                    content: $kkr-equal; 
+                    width: 8px;
+                    display: inline-block;
+
+                    margin-right: 5px;
+                    font-size: 10px;
+                }
+            }
+        }
+        &.si-low{
+            .si-rank{
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    
+                    border-top: 4px solid $incorrect;
+                    margin-right: 5px;
+                }
+            }
+
+        }
+
+        &.si-you{
+            background-color: $secondary;
+            color: $neutral-2;
+        }
+        &.si-ldTblHd{
+            background-color: $neutral;
+            border: none;
+            color: $primary-2;
+            .si-ldTblCol{
+                height: 27px;
+            }
+        }
+
+        
+    }
+    &Col{
+        height: 39px;
+        @extend %si-fb;
+        align-items: center;
+        justify-self: center;
+        padding: 10px;
+        position: relative;
+        label{
+            margin-left: 3px;
+        }
+        &:nth-child(2){
+            flex: 1;
+        }
+        &:first-child{
+            width: 60px;
+        }
+        &:last-child{
+            width: 60px;
+            justify-content: right;
+        }
+    }
+}
