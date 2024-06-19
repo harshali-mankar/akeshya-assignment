@@ -1,6 +1,0 @@
-**/.vscode/
-**/.eslintcache
-node_modules
-.eslintcache
-build
-build.sh
