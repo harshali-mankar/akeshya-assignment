@@ -12,18 +12,14 @@ import Stats from "@/components/stats";
 export default function Home() {
   return (
     <>
-      <div className="si-main">
-        <Header />
-        <HeroBanner />
-        <OurClients />
-        <AboutUs />
-        <Stats />
-        <Services />
-        <OurProcess />
-        <OurCoreFeatures />
-        <ContactUs />
-        <Footer />
-      </div>
+      <HeroBanner />
+      <OurClients />
+      <AboutUs />
+      <Stats />
+      <Services />
+      <OurProcess />
+      <OurCoreFeatures />
+      <ContactUs />
     </>
   );
 }
