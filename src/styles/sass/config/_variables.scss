@@ -1,0 +1,169 @@
+$image-version: "0.0";
+
+:root {
+  --transparent: transparent;
+  --googlePlus: hsl(7, 71%, 55%);
+  --facebook: hsl(214, 90%, 53%);
+  --twitter: hsl(198, 75%, 53%);
+  --whatsApp: hsl(131, 69%, 48%);
+  --instagram: hsl(205, 77%, 30%);
+
+  // Default Color
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --black-hsl: 0, 0%, 0%;
+
+  /* primary */
+  --primary-1: hsl(250, 90%, 15%);
+  --primary-2: hsl(328, 100%, 50%);
+  --primary-3: hsl(225, 100%, 19%);
+  /* secondary */
+  --secondary-1: hsl(247, 100%, 57%);
+  --secondary-2: hsl(165, 100%, 44%);
+  --secondary-3: hsl(248, 100%, 96%);
+  --secondary-4: hsl(328, 100%, 95%);
+  /* neutral */
+  --neutral-1: hsl(0, 0%, 13%);
+  --neutral-2: hsl(0, 0%, 100%);
+  --neutral-3: hsl(232, 77%, 34%);
+  --neutral-4: hsl(328, 100%, 50%);
+  --neutral-5: hsl(205, 16%, 38%);
+  --neutral-6: hsl(0, 0%, 52%);
+  --neutral-7: hsl(0, 0%, 96%);
+  --neutral-8: hsl(0, 0%, 80%);
+  --ourClient-bg: hsl(204, 71%, 97%);
+  /* background */
+  --background-1: hsl(250, 90%, 15%);
+  --background-2: hsl(225, 100%, 19%);
+  --background-3: hsl(247, 100%, 57%);
+  --background-4: hsl(0, 0%, 100%);
+
+  /* accent */
+  --accent-error: hsla(0, 100%, 50%, 1);
+  --accent-success: hsla(104, 100%, 40%, 1);
+  --accent-warning: hsla(29, 100%, 50%, 1);
+  --accent-1: hsla(53, 100%, 50%, 1);
+
+  /* primary-cta */
+  --cta-primary: hsl(232, 77%, 34%);
+  --cta-primary-text: hsl(0, 0%, 100%);
+  --cta-primary-icon: hsl(0, 0%, 100%);
+  --cta-primary-stroke: hsl(232, 77%, 34%);
+  --cta-primary-hover: transparent;
+  --cta-primary-active: transparent;
+  /* secondary-cta */
+  --cta-secondary: hsla(0, 0%, 100%, 1);
+  --cta-secondary-text: hsla(225, 100%, 19%, 1);
+  --cta-secondary-icon: hsla(225, 100%, 19%, 1);
+  --cta-secondary-stroke: hsla(225, 100%, 19%, 1);
+  --cta-secondary-hover: transparent;
+  --cta-secondary-active: transparent;
+  /* tertiary-cta */
+  --cta-tertiary: hsla(225, 100%, 19%, 1);
+  --cta-tertiary-text: hsla(0, 0%, 100%, 1);
+  --cta-tertiary-icon: hsla(0, 0%, 100%, 1);
+  --cta-tertiary-stroke: hsla(225, 100%, 19%, 1);
+  --cta-tertiary-hover: transparent;
+  --cta-tertiary-active: transparent;
+
+  /* navbar */
+  --nav-bg: transparent;
+  --nav-text: hsla(248, 48%, 91%, 1);
+  --nav-active-bg: hsla(328, 100%, 50%, 1);
+  --nav-active-text: hsla(0, 0%, 100%, 1);
+
+  // table
+  --tbl-head: hsla(225, 100%, 19%, 1);
+  --tbl-head-text: hsla(216, 2%, 48%, 1);
+  --tbl-border: hsla(218, 21%, 93%, 1);
+
+  // Dropdow
+  --drp-text-color: hsla(225, 100%, 19%, 1);
+  // all variables
+  --base-font-size: 62.5%;
+  --vh: 1vh;
+  --window-inner-height: calc(var(--vh, 1vh) * 100);
+  --full-space: 1.6rem;
+  --half-space: 0.8rem;
+  --full-space-negative: calc(var(--full-space) * -1);
+  --half-space-negative: calc(var(--half-space) * -1);
+  --border-radius: 1.6rem;
+  --half-border-radius: 0.8rem;
+  --cta-height-xs: 1.4rem;
+  --cta-height: 4.8rem;
+  --cta-loadmore-height: 2rem;
+  --input-height: 4.4rem;
+  --footer-nav: calc(5rem + 2rem);
+  --gutter-space: 0.4rem;
+  --menu-height: 6rem;
+  --createteam-footer: 7.2rem;
+  --toggle-w: 4rem;
+  --toggle-h: 2.4rem;
+  --game-header-height: 6rem;
+  --grid-width: 44rem;
+  --section-tb-pad: 2.4rem;
+  // container width
+  --screen-mob-xs: 375px;
+  --screen-mob-sm: 480px;
+  --screen-mob: 576px;
+  --screen-tab: 768px;
+  --screen-lap: 984px;
+  --screen-desk: 1320px;
+
+  // Base64 Img
+  --select-box-icon: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACZSURBVHgB7Y0xCgIxEEUnKxHcGBIkgTQucwSv4Em8ikfwCHqS2Fp6ArfcchYhTYqYgEUKFfvdB8PMfObPB5j5yqJerO0eQigKYbzXutYOpdx4Ida3EJ5D0Zr6ICW45HbODw61ifOlL3OMvP+YmJOubasYY3CSUo2cr4a3iWJs9kQ9wS+M6Y45NZUyZuu1Rg3/4hyitbiDCfMCHFoncsdK4HgAAAAASUVORK5CYII=");
+
+  // Images/Patterns
+
+  // --fantastic_fours-bg: url(../images/boosters/booster-bg/fantastic_fours.svg?v=#{$image-version})
+  //   no-repeat round($number: 0) center/contain;
+}
+
+//Event theme
+// .event-theme {
+//   :root {
+//     --theme-default: #d2091b;
+//     --theme-default-rgb: 210, 9, 27;
+//   }
+// }
+
+// .si-white-theme {
+//   :root {
+//   }
+// }
+
+// mobile ex-small
+$media-mobile-ex-sm-min: 320px;
+$media-mobile-ex-sm-max: 321.98px;
+
+// mobile small
+$media-mobile-sm-min: 375px;
+$media-mobile-sm-max: 374.98px;
+
+// mobile
+$media-mobile-min: 576px;
+$media-mobile-max: 575.98px;
+
+// tablets
+$media-tablets-min: 768px;
+$media-tablets-max: 767.98px;
+
+// desktop
+$media-desktop-min: 992px;
+$media-desktop-max: 991.98px;
+
+// lg-desktop
+$media-lg-desktop-min: 1200px;
+$media-lg-desktop-max: 1199.98px;
+
+// extra lg-desktop
+$media-xlg-desktop-min: 1400px;
+$media-xlg-desktop-max: 1399.98px;
+
+:root {
+}
+@media screen and (min-width: $media-desktop-min) {
+  :root {
+    --section-tb-pad: 2.4rem;
+  }
+}

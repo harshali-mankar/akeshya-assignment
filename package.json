@@ -1,0 +1,22 @@
+{
+  "name": "akeshya-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev && sass --watch --update --style=expanded styles/sass:styles/css",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:scss": "sass styles/sass -o styles/css"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "sass": "^1.77.4"
+  }
+}

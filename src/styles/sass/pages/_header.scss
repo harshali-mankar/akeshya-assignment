@@ -1,0 +1,110 @@
+@use "../config" as *;
+// Prediction Navigation
+.si-navbar {
+  min-width: auto;
+  margin: var(--full-space) 0;
+  width: auto;
+  @media screen and (min-width: $media-mobile-min) {
+    min-width: var(--screen-mob-sm);
+    width: fit-content;
+  }
+  &__wrap {
+    border: 1px solid var(--neutral-8);
+    justify-content: space-between;
+    overflow: hidden;
+    background: var(--neutral-7);
+    @extend %si-borRad8 !optional;
+    ul {
+      overflow-x: auto;
+      @extend %flexbox !optional;
+      li {
+        font-size: 12px;
+        color: var(--neutral-5);
+        width: 100%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 20px;
+        white-space: nowrap;
+        @extend %flexbox !optional;
+        &.si-active {
+          background: var(--primary-3);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.si-header {
+  background: var(--neutral-2);
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  padding: calc(var(--gutter-space) * 4) 0;
+  &__grid {
+    justify-content: space-between;
+    align-items: center;
+    @extend %flexbox !optional;
+  }
+  &__brandLogo {
+    font-size: 3rem;
+    aspect-ratio: 16/9;
+    width: 12rem;
+    gap: var(--gutter-space);
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--neutral-3);
+    @extend %flexbox !optional;
+    @extend %si-mediumFF !optional;
+
+    img {
+      display: block;
+      aspect-ratio: 1/1;
+      width: 6rem;
+      height: auto;
+    }
+  }
+}
+
+.si-footer {
+  &__wrap {
+    --section-tb-pad: 3rem;
+    box-shadow: 0 0 1.2rem 0 hsla(0, 0%, 0%, 0.1);
+  }
+  &__grid {
+    gap: calc(var(--gutter-space) * 4);
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column-reverse;
+    @extend %flexbox !optional;
+    @media screen and (min-width: $media-mobile-min) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--neutral-1);
+    @media screen and (min-width: $media-mobile-min) {
+      font-size: 1.4rem;
+    }
+  }
+  &__sitemap {
+    font-size: 1.2rem;
+    gap: calc(var(--gutter-space) * 2);
+    justify-content: space-between;
+    align-items: center;
+    @extend %flexbox !optional;
+    @media screen and (min-width: $media-mobile-min) {
+      font-size: 1.4rem;
+      gap: calc(var(--gutter-space) * 5);
+    }
+    a {
+      color: var(--neutral-1);
+      @extend %si-regularFF !optional;
+    }
+  }
+}

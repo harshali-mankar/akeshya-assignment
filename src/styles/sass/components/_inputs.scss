@@ -1,0 +1,102 @@
+@use "../config" as *;
+
+//Form Input
+.si-form {
+  margin-bottom: 18px;
+  position: relative;
+}
+.si-input {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  &.si-valid {
+    .si-input__field {
+      input {
+        border-color: var(--ascent-success);
+      }
+    }
+    .si-errMsg {
+      color: var(--ascent-success);
+    }
+  }
+
+  &.si-invalid {
+    .si-input__field {
+      input {
+        border-color: var(--ascent-error);
+      }
+    }
+  }
+  &__control {
+    margin-bottom: var(--full-space);
+  }
+  &__field {
+    overflow: hidden;
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    .si-btn {
+      background: transparent;
+    }
+  }
+  &--error {
+    color: var(--ascent-error);
+    font-size: 12px;
+    padding: var(--gutter-space) calc(var(--gutter-space) * 3) 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  input,
+  textarea {
+    font-size: 1.4rem;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
+    height: var(--input-height);
+    width: 100%;
+    display: block;
+    color: var(--primary-3);
+    background: var(--neutral-2);
+    border: 0.1rem solid var(--neutral-1);
+    @include transition(border 0.1s linear);
+    // @extend %si-borRad2 !optional;
+    @extend %si-mediumFF !optional;
+  }
+  textarea {
+    height: auto;
+    min-height: 12rem;
+    resize: none;
+  }
+  select {
+    cursor: pointer;
+    padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
+    display: block;
+    height: var(--input-height);
+    width: 100%;
+    color: var(--primary-3);
+    background-color: var(--neutral-2);
+    border: 0.1rem solid var(--neutral-1);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: var(--select-box-icon);
+    background-position: 96%;
+    background-repeat: no-repeat;
+    @extend %si-regularFF !optional;
+
+    option {
+      color: var(--neutral-3);
+      font: -moz-pull-down-menu;
+      @extend %si-regularFF !optional;
+      padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
+      background: var(--neutral-6);
+    }
+  }
+}

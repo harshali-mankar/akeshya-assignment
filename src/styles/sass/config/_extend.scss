@@ -1,0 +1,77 @@
+@use "../config/mixins" as *;
+
+@mixin matchTag($tagThemeBg, $tagThemeColor) {
+  background: $tagThemeBg;
+  color: $tagThemeColor;
+}
+
+%si-buttonReset {
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+%si-borRad100 {
+  @include border-radius(100px);
+}
+%si-borRad48 {
+  @include border-radius(48px);
+}
+%si-borRad24 {
+  @include border-radius(24px);
+}
+%si-borRad30 {
+  @include border-radius(30px);
+}
+%si-borRad14 {
+  @include border-radius(14px);
+}
+%si-borRad18 {
+  @include border-radius(18px);
+}
+%si-borRad12 {
+  @include border-radius(12px);
+}
+%si-borRad10 {
+  @include border-radius(10px);
+}
+%si-borRad8 {
+  @include border-radius(8px);
+}
+%si-borRad6 {
+  @include border-radius(6px);
+}
+%si-borRad4 {
+  @include border-radius(4px);
+}
+%si-borRad2 {
+  @include border-radius(2px);
+}
+%si-borRad0 {
+  @include border-radius(0px);
+}
+
+%si-lightFF {
+  font-family: var(--light-ff);
+}
+%si-regularFF {
+  font-family: var(--regular-ff);
+}
+%si-mediumFF {
+  font-family: var(--medium-ff);
+}
+%si-boldFF {
+  font-family: var(--bold-ff);
+}
+%si-blackBoldFF {
+  font-family: var(--black-ff);
+}
+
+//background size
+%si-bgSize--cover {
+  @include background-size(cover);
+}
+
+%si-bgSize--contain {
+  @include background-size(contain);
+}

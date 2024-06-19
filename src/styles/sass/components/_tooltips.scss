@@ -1,0 +1,104 @@
+@use "../config" as *;
+
+.si-tooltip {
+  &__wrap {
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    @extend %flexbox !optional;
+    &.si-active {
+      .si-tooltip__icon {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__box {
+    background: var(--white);
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    @extend %flexbox !optional;
+    padding: 8px;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    left: calc(100% + 4px);
+    min-width: 90px;
+    z-index: 1;
+    &.si-active {
+      .si-tooltip__text {
+        opacity: 1;
+        @include transform(translateX(50px));
+        @media screen and (max-width: $media-mobile-min) {
+          @include transform(translateX(40px));
+        }
+      }
+    }
+  }
+  &__icon {
+    color: var(--secondary-1);
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: var(--gutter-space);
+    margin-right: var(--gutter-space);
+    width: 14px;
+    height: 14px;
+    position: relative;
+    // background-image: url(../images/info.svg?v=#{$image-version});
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // @extend .si-bgSize--contain !optional;
+    @media screen and (max-width: $media-mobile-min) {
+      // width: 20px;
+      // height: 20px;
+      // margin-left: var(--half-space);
+      // margin-right: var(--half-space);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 4px);
+      width: 10px;
+      height: 10px;
+      background-color: var(--white);
+      @include transform(translateY(-50%) rotate(45deg));
+      z-index: 11;
+      opacity: 0;
+    }
+  }
+  &__text {
+    pointer-events: none;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    @extend %si-mediumFF !optional;
+    font-size: 12px;
+    padding: var(--half-space) var(--full-space);
+    background-color: var(--white);
+    color: var(--default);
+    @extend .si-borRad4 !optional;
+    @include transform(translateX(0));
+    @include transition(opacity 0.1s linear, transform 0.1s linear);
+    @media screen and (max-width: $media-mobile-min) {
+      font-size: 10px;
+      padding-left: var(--half-space);
+      padding-right: var(--half-space);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      width: 10px;
+      height: 10px;
+      background-color: var(--white);
+      @include transform(translateY(-50%) rotate(45deg));
+    }
+    b {
+      @extend %si-boldFF !optional;
+    }
+  }
+}
