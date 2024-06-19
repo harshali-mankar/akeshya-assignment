@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+
 import "../styles/sass/style-fonts.scss";
 import "../styles/sass/style.scss";
 import Header from "@/components/header";
