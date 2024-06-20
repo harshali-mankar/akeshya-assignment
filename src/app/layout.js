@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
       <body>
-        <div className="si-main">
+        <div className="main">
           <Header />
           {children}
           <Footer />

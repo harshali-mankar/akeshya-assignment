@@ -36,35 +36,35 @@ const statsArr = [
 const Stats = () => {
   return (
     <>
-      <section className="si-stats__wrap">
-        <div className="si-main__container">
-          <div className="si-stats__grid">
-            <div className="si-stats__grid-lhs">
-              <div className="si-stats__thumb">
+      <section className="stats__wrap">
+        <div className="main__container">
+          <div className="stats__grid">
+            <div className="stats__grid-lhs">
+              <div className="stats__thumb">
                 <Image src={statsThumb} alt={statsThumb} />
               </div>
             </div>
             <motion.div
-              className="si-stats__grid-rhs"
+              className="stats__grid-rhs"
               initial={{ opacity: 0, x: 200 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <div className="si-stats__list">
+              <div className="stats__list">
                 {statsArr.map((item, index) => (
-                  <div className="si-stats__box" key={index}>
-                    <div className="si-stats__box-icon">
+                  <div className="stats__box" key={index}>
+                    <div className="stats__box-icon">
                       <i className={item.icon}></i>
                     </div>
-                    <div className="si-stats__box-count">
+                    <div className="stats__box-count">
                       {item?.tickerEffect ? (
                         <TextTicker value={Number(item.count)} />
                       ) : (
                         item.count
                       )}
                     </div>
-                    <div className="si-stats__box-lbl">
+                    <div className="stats__box-lbl">
                       {item.title} {item.slug && <em>{item.slug}</em>}
                     </div>
                   </div>

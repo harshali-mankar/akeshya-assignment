@@ -28,19 +28,19 @@ const servicesArr = [
 const OurProcess = () => {
   return (
     <>
-      <section className="si-ourProcess__wrap si-section__wrap">
-        <div className="si-main__container">
+      <section className="ourProcess__wrap section__wrap">
+        <div className="main__container">
           <SectionHeading heading="OUR PROCESS" />
           <SectionCaption content="Over the years we’ve evolved a tested method for attaining achievement for each one of our clients." />
-          <div className="si-services__list">
+          <div className="services__list">
             {servicesArr.map((item, index) => (
-              <div className="si-services__box" key={index}>
-                <h3 className="si-services__box-title">
+              <div className="services__box" key={index}>
+                <h3 className="services__box-title">
                   {index + 1}
                   {". "}
                   {item.title}
                 </h3>
-                <p className="si-services__box-content">{item.content}</p>
+                <p className="services__box-content">{item.content}</p>
               </div>
             ))}
           </div>

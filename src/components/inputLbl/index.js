@@ -4,7 +4,7 @@ import React from "react";
 const InputLabel = ({ inputID, hideInputLbl, inputLbl }) => {
   return (
     <>
-      <label className="si-lbl" htmlFor={inputID}>
+      <label className="lbl" htmlFor={inputID}>
         {!hideInputLbl ? inputLbl : null}
       </label>
     </>

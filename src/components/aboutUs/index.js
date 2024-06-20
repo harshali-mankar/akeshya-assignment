@@ -6,10 +6,10 @@ import CtaButton from "@/components/ctaButton";
 const AboutUs = () => {
   return (
     <>
-      <section className="si-aboutUs__wrap si-section__wrap">
-        <div className="si-main__container">
+      <section className="aboutUs__wrap section__wrap">
+        <div className="main__container">
           <SectionHeading heading="ABOUT US" />
-          <div className="si-aboutUs__content">
+          <div className="aboutUs__content">
             <p>
               We are Akeshya, a firm that specializes in web design and
               marketing. We help transform ideas into reality with a team of
@@ -39,7 +39,7 @@ const AboutUs = () => {
               require a graphic designer who can match your goals.
             </p>
             <CtaButton
-              btnCls={"si-btn si-btn__primary si-btn__primary--outline"}
+              btnCls={"btn btn__primary btn__primary--outline"}
               btnText={"Learn More"}
               onClickProp={() => {}}
             />

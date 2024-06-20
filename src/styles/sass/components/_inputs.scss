@@ -1,27 +1,27 @@
 @use "../config" as *;
 
 //Form Input
-.si-form {
+.form {
   margin-bottom: 18px;
   position: relative;
 }
-.si-input {
+.input {
   z-index: 1;
   position: relative;
   width: 100%;
-  &.si-valid {
-    .si-input__field {
+  &.valid {
+    .input__field {
       input {
         border-color: var(--ascent-success);
       }
     }
-    .si-errMsg {
+    .errMsg {
       color: var(--ascent-success);
     }
   }
 
-  &.si-invalid {
-    .si-input__field {
+  &.invalid {
+    .input__field {
       input {
         border-color: var(--ascent-error);
       }
@@ -39,7 +39,7 @@
     left: auto;
     right: 0;
     top: 0;
-    .si-btn {
+    .btn {
       background: transparent;
     }
   }
@@ -64,11 +64,11 @@
     width: 100%;
     display: block;
     color: var(--primary-3);
-    background: var(--neutral-2);
-    border: 0.1rem solid var(--neutral-1);
-    @include transition(border 0.1s linear);
-    // @extend %si-borRad2 !optional;
-    @extend %si-mediumFF !optional;
+    background: var(--white);
+    border: 0.1rem solid #ced4da;
+    transition: border 0.1s linear;
+    // @extend %borRad2 !optional;
+    @extend %mediumFF !optional;
   }
   textarea {
     height: auto;
@@ -89,12 +89,12 @@
     background-image: var(--select-box-icon);
     background-position: 96%;
     background-repeat: no-repeat;
-    @extend %si-regularFF !optional;
+    @extend %regularFF !optional;
 
     option {
       color: var(--neutral-3);
       font: -moz-pull-down-menu;
-      @extend %si-regularFF !optional;
+      @extend %regularFF !optional;
       padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
       background: var(--neutral-6);
     }

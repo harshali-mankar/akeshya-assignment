@@ -6,27 +6,27 @@ import heroBannerThumb from "@/images/hero-img.png";
 const HeroBanner = () => {
   return (
     <>
-      <section className="si-heroBanner__wrap">
-        <div className="si-main__container">
-          <div className="si-heroBanner__grid">
-            <div className="si-heroBanner__grid-lhs">
-              <h1 className="si-heroBanner__title">
+      <section className="heroBanner__wrap">
+        <div className="main__container">
+          <div className="heroBanner__grid">
+            <div className="heroBanner__grid-lhs">
+              <h1 className="heroBanner__title">
                 Grow your business with Akeshya
               </h1>
-              <h2 className="si-heroBanner__caption">
+              <h2 className="heroBanner__caption">
                 We are team of talented website designers, developers & digital
                 marketeers
               </h2>
-              <div className="si-heroBanner__cta">
+              <div className="heroBanner__cta">
                 <CtaButton
-                  btnCls="si-btn si-btn__primary si-btn__primary--outline"
+                  btnCls="btn btn__primary btn__primary--outline"
                   btnText={"Get Started"}
                   onClickProp={() => {}}
                 />
               </div>
             </div>
-            <div className="si-heroBanner__grid-rhs">
-              <div className="si-heroBanner__thumb">
+            <div className="heroBanner__grid-rhs">
+              <div className="heroBanner__thumb">
                 <Image src={heroBannerThumb} alt="akeshya-logo" />
               </div>
             </div>

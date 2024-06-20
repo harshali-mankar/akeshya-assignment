@@ -7,21 +7,21 @@ import ContactUsForm from "../contactUsForm";
 const ContactUs = () => {
   return (
     <>
-      <section className="si-contactUs__wrap si-section__wrap">
-        <div className="si-main__container">
+      <section className="contactUs__wrap section__wrap">
+        <div className="main__container">
           <SectionHeading heading="CONTACT US" />
-          <div className="si-contactUs__grid">
-            <div className="si-contactUs__grid-lhs">
-              <div className="si-contactUs__brand">
-                <h2 className="si-contactUs__brand-title">Akeshya</h2>
+          <div className="contactUs__grid">
+            <div className="contactUs__grid-lhs">
+              <div className="contactUs__brand">
+                <h2 className="contactUs__brand-title">Akeshya</h2>
                 <p>
                   Designers, developers & marketeers capable of delivering
                   solutions according to your needs,
                 </p>
               </div>
             </div>
-            <div className="si-contactUs__grid-mid">
-              <div className="si-contactUs__info">
+            <div className="contactUs__grid-mid">
+              <div className="contactUs__info">
                 <ul>
                   <li>
                     <Anchor
@@ -49,7 +49,7 @@ const ContactUs = () => {
                 </ul>
               </div>
             </div>
-            <div className="si-contactUs__grid-rhs">
+            <div className="contactUs__grid-rhs">
               <ContactUsForm />
             </div>
           </div>

@@ -32,8 +32,8 @@ const InputTextArea = ({
     <>
       <div
         ref={parentDiv}
-        className={`si-input ${parentExtraCls ? parentExtraCls : ""} ${
-          inputValidate ? "si-invalid" : ""
+        className={`input ${parentExtraCls ? parentExtraCls : ""} ${
+          inputValidate ? "invalid" : ""
         }`}
       >
         {inputLbl ? (
@@ -46,7 +46,7 @@ const InputTextArea = ({
           ""
         )}
 
-        <div className="si-input__field">
+        <div className="input__field">
           <textarea
             id={inputId}
             name={inputId}

@@ -1,22 +1,69 @@
 @use "../config" as *;
 // Prediction Navigation
-.si-navbar {
+.navbar {
   min-width: auto;
   margin: var(--full-space) 0;
   width: auto;
-  @media screen and (min-width: $media-mobile-min) {
-    min-width: var(--screen-mob-sm);
-    width: fit-content;
+
+  i {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: $media-desktop-max) {
+    ul {
+      position: absolute;
+      inset: 60px 20px 20px 20px;
+      flex-direction: column;
+      background-color: var(--white);
+      border-radius: 8px;
+      display: none;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      li {
+        padding: 10px 20px;
+        margin-left: 0;
+        width: 100%;
+        a {
+          justify-content: left;
+        }
+      }
+    }
+    &.navbar-mobile {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(9, 9, 9, 0.9);
+      transition: 0.3s;
+      z-index: 999;
+      ul {
+        display: flex;
+      }
+      i {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: var(--white);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
   &__wrap {
     border: 1px solid var(--neutral-8);
     justify-content: space-between;
     overflow: hidden;
     background: var(--neutral-7);
-    @extend %si-borRad8 !optional;
+    @extend %borRad8 !optional;
     ul {
       overflow-x: auto;
-      @extend %flexbox !optional;
+      display: flex;
+
       li {
         font-size: 12px;
         color: var(--neutral-5);
@@ -27,8 +74,8 @@
         cursor: pointer;
         padding: 0 20px;
         white-space: nowrap;
-        @extend %flexbox !optional;
-        &.si-active {
+        display: flex;
+        &.active {
           background: var(--primary-3);
           color: var(--white);
         }
@@ -37,16 +84,22 @@
   }
 }
 
-.si-header {
-  background: var(--neutral-2);
-  z-index: 2;
-  position: sticky;
+.header {
+  position: fixed;
+  width: 100%;
+  background: var(--white);
   top: 0;
-  padding: calc(var(--gutter-space) * 4) 0;
+  padding: calc(var(--gutter-space) * 5);
+  z-index: 2;
+
+  &.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+  }
   &__grid {
     justify-content: space-between;
     align-items: center;
-    @extend %flexbox !optional;
+    display: flex;
   }
   &__brandLogo {
     font-size: 3rem;
@@ -55,9 +108,9 @@
     gap: var(--gutter-space);
     justify-content: flex-start;
     align-items: center;
-    color: var(--neutral-3);
-    @extend %flexbox !optional;
-    @extend %si-mediumFF !optional;
+    color: var(--primary);
+    display: flex;
+    font-weight: var(--fontWeightBold);
 
     img {
       display: block;
@@ -68,7 +121,7 @@
   }
 }
 
-.si-footer {
+.footer {
   &__wrap {
     --section-tb-pad: 3rem;
     box-shadow: 0 0 1.2rem 0 hsla(0, 0%, 0%, 0.1);
@@ -78,7 +131,7 @@
     justify-content: space-between;
     align-items: stretch;
     flex-direction: column-reverse;
-    @extend %flexbox !optional;
+    display: flex;
     @media screen and (min-width: $media-mobile-min) {
       align-items: center;
       flex-direction: row;
@@ -97,14 +150,14 @@
     gap: calc(var(--gutter-space) * 2);
     justify-content: space-between;
     align-items: center;
-    @extend %flexbox !optional;
+    display: flex;
     @media screen and (min-width: $media-mobile-min) {
       font-size: 1.4rem;
       gap: calc(var(--gutter-space) * 5);
     }
     a {
-      color: var(--neutral-1);
-      @extend %si-regularFF !optional;
+      color: var(--primary);
+      @extend %regularFF !optional;
     }
   }
 }

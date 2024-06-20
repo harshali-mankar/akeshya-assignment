@@ -5,14 +5,14 @@ import Anchor from "../anchor";
 const Footer = () => {
   return (
     <>
-      <footer className="si-footer__wrap si-section__wrap">
-        <div className="si-main__container">
-          <div className="si-footer__grid">
-            <div className="si-footer__copyright">
+      <footer className="footer__wrap section__wrap">
+        <div className="main__container">
+          <div className="footer__grid">
+            <div className="footer__copyright">
               <i className="ri-copyright-line"></i> Copyright <b>Akeshya</b>.
               All Rights Reserved
             </div>
-            <div className="si-footer__sitemap">
+            <div className="footer__sitemap">
               <Anchor
                 hyperLink={"https://akeshya.com/Terms%20and%20conditions.pdf"}
                 linkText={"Terms and conditions"}

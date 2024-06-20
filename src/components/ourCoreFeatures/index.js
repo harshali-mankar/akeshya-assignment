@@ -69,20 +69,20 @@ const ourCoreFeaturesArr = [
 const OurCoreFeatures = () => {
   return (
     <>
-      <section className="si-ourCoreFeatures__wrap si-section__wrap">
-        <div className="si-main__container">
+      <section className="ourCoreFeatures__wrap section__wrap">
+        <div className="main__container">
           <SectionHeading heading="OUR CORE FEATURES" />
           <SectionCaption content="Akeshya is a forward-thinking and intelligent design firm that is technically and creatively capable of transforming your brand into its best digital self. Our approach to design and development results in compelling, engaging branding and immersive digital experiences that provide a value for money." />
-          <div className="si-ourCoreFeatures__list">
+          <div className="ourCoreFeatures__list">
             {ourCoreFeaturesArr.map((item, index) => (
-              <div className="si-ourCoreFeatures__box" key={index}>
+              <div className="ourCoreFeatures__box" key={index}>
                 <div
-                  className="si-ourCoreFeatures__box-icon"
+                  className="ourCoreFeatures__box-icon"
                   style={{ color: item.iconColor }}
                 >
                   <i className={item.icon}></i>
                 </div>
-                <h3 className="si-ourCoreFeatures__box-title">{item.title}</h3>
+                <h3 className="ourCoreFeatures__box-title">{item.title}</h3>
               </div>
             ))}
           </div>

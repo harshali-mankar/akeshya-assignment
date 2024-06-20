@@ -33,8 +33,8 @@ const InputField = ({
     <>
       <div
         ref={parentDiv}
-        className={`si-input ${parentExtraCls ? parentExtraCls : ""} ${
-          inputValidate ? "si-invalid" : ""
+        className={`input ${parentExtraCls ? parentExtraCls : ""} ${
+          inputValidate ? "invalid" : ""
         }`}
       >
         {inputLbl ? (
@@ -49,7 +49,7 @@ const InputField = ({
           ""
         )}
 
-        <div className="si-input__field">
+        <div className="input__field">
           {placeholderIcon ? <i className={placeholderIcon} /> : null}
           <input
             autoComplete="off"
@@ -68,9 +68,9 @@ const InputField = ({
           {components ? components : null}
 
           {isIcon ? (
-            <div className="si-input__icon">
+            <div className="input__icon">
               <CtaButton
-                btnCls={"si-btn si-btn__icon"}
+                btnCls={"btn btn__icon"}
                 iconCls={isIcon}
                 onClickProp={() => iconClickHandler && iconClickHandler()}
               />

@@ -20,13 +20,13 @@ const ourClientsArr = [
 const OurClients = () => {
   return (
     <>
-      <div className="si-ourClients__wrap">
-        <div className="si-main__container">
-          <div className="si-ourClients__grid">
+      <div className="ourClients__wrap">
+        <div className="main__container">
+          <div className="ourClients__grid">
             {ourClientsArr.map((item, index) => {
               return (
-                <div key={index} className="si-ourClients__grid-item">
-                  <div className="si-ourClients__thumb">
+                <div key={index} className="ourClients__grid-item">
+                  <div className="ourClients__thumb">
                     <Image src={item} alt={`client-${index + 1}`} />
                     {/* <img src={item} alt={`client-${index + 1}`} /> */}
                   </div>

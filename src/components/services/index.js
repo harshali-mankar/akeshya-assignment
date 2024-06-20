@@ -34,23 +34,23 @@ const servicesArr = [
 const Services = () => {
   return (
     <>
-      <section id="services" className="si-services__wrap si-section__wrap">
-        <div className="si-main__container">
+      <section id="services" className="services__wrap section__wrap">
+        <div className="main__container">
           <SectionHeading heading="SERVICES" />
           <SectionCaption content="Akeshya will serve as your consultant and development partner to help you turn your idea into a reality." />
-          <div className="si-services__list">
+          <div className="services__list">
             {servicesArr.map((item, index) => (
               <Anchor
                 key={index}
-                linkCls={"si-services__box"}
+                linkCls={"services__box"}
                 hyperLink={""}
                 component={
                   <>
-                    <div className="si-services__box-icon">
+                    <div className="services__box-icon">
                       <i className={item.icon}></i>
                     </div>
-                    <h3 className="si-services__box-title">{item.title}</h3>
-                    <p className="si-services__box-content">{item.content}</p>
+                    <h3 className="services__box-title">{item.title}</h3>
+                    <p className="services__box-content">{item.content}</p>
                   </>
                 }
               />

@@ -1,6 +1,6 @@
 @use "../config" as *;
 
-.si-heroBanner {
+.heroBanner {
   &__wrap {
     padding-top: var(--section-tb-pad);
     padding-bottom: var(--section-tb-pad);
@@ -10,7 +10,7 @@
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    @extend %flexbox !optional;
+    display: flex;
     @media screen and (min-width: $media-mobile-min) {
       flex-direction: row;
     }
@@ -21,14 +21,13 @@
         gap: calc(var(--gutter-space) * 4);
       }
     }
-    &-rhs {
-    }
   }
   &__title {
     line-height: 1;
     font-size: 2.8rem;
-    color: var(--neutral-3);
-    @extend %si-mediumFF !optional;
+    color: var(--primary);
+    font-family: var(--raleway-ff);
+    font-weight: var(--fontWeightBold);
     @media screen and (min-width: $media-mobile-min) {
       font-size: 4.8rem;
     }
@@ -36,7 +35,7 @@
   &__caption {
     font-size: 1.8rem;
     color: var(--neutral-1);
-    @extend %si-lightFF !optional;
+    font-weight: var(--fontWeightReguler);
     @media screen and (min-width: $media-mobile-min) {
       font-size: 2.4rem;
     }
@@ -45,11 +44,11 @@
     margin-top: calc(var(--gutter-space) * 3);
     justify-content: flex-start;
     align-items: center;
-    @extend %flexbox !optional;
+    display: flex;
     @media screen and (min-width: $media-mobile-min) {
       margin-top: calc(var(--gutter-space) * 6);
     }
-    .si-btn {
+    .btn {
       margin: 0;
     }
   }

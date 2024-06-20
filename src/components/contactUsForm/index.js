@@ -7,7 +7,7 @@ import CtaButton from "../ctaButton";
 const ContactUsForm = () => {
   return (
     <>
-      <form className="si-contactUs__form">
+      <form className="contactUs__form">
         <InputField
           placeholderLabel={"Your Name"}
           inputID={"yourName"}
@@ -32,7 +32,7 @@ const ContactUsForm = () => {
           handleInput={() => {}}
         />
         <CtaButton
-          btnCls={"si-btn si-btn__primary"}
+          btnCls={"btn btn__primary"}
           btnText={"Send Message"}
           onClickProp={() => {}}
         />

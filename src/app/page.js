@@ -1,7 +1,5 @@
 import AboutUs from "@/components/aboutUs";
 import ContactUs from "@/components/contactUs";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 import HeroBanner from "@/components/heroBanner";
 import OurClients from "@/components/ourClients";
 import OurCoreFeatures from "@/components/ourCoreFeatures";

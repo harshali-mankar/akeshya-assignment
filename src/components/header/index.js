@@ -5,7 +5,7 @@ import logo from "@/images/logo.png";
 import Anchor from "../anchor";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { useState } from "react";
 const navigationLinks = [
   {
     id: 1,
@@ -35,14 +35,20 @@ const navigationLinks = [
 
 const Header = () => {
   const pathname = usePathname();
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+
+  const toggleMobileMenu = () => {
+    alert("in toggle");
+    setIsMobileMenuActive(!isMobileMenuActive);
+  };
   return (
     <>
-      <div className="si-header">
-        <div className="si-main__container">
-          <div className="si-header__grid">
+      <div className="header">
+        <div className="main__container">
+          <div className="header__grid">
             <Anchor
               hyperLink={"/"}
-              linkCls={"si-header__brandLogo"}
+              linkCls={"header__brandLogo"}
               component={
                 <>
                   <Image src={logo} alt="akeshya-logo" />
@@ -50,7 +56,9 @@ const Header = () => {
                 </>
               }
             />
-            <nav className="navbar">
+            <nav
+              className={`navbar ${isMobileMenuActive ? "navbar-mobile" : ""}`}
+            >
               <ul>
                 {navigationLinks.map(
                   ({ id, href, text, additional_classname }) => (
@@ -58,12 +66,8 @@ const Header = () => {
                       <Link
                         className={
                           pathname === href
-                            ? `active ${
-                                additional_classname != ""
-                                  ? additional_classname
-                                  : ""
-                              }`
-                            : ""
+                            ? `active ${additional_classname}`
+                            : additional_classname
                         }
                         href={href}
                       >
@@ -73,6 +77,17 @@ const Header = () => {
                   )
                 )}
               </ul>
+              {/* change class on avtive mobile menu ri-close-line */}
+              <i
+                className={`hide--desktop ${
+                  isMobileMenuActive ? "ri-close-line" : "ri-menu-line"
+                }`}
+                onClick={() => {
+                  setIsMobileMenuActive(!isMobileMenuActive);
+                }}
+                //onClick={toggleMobileMenu()}
+                style={{ cursor: "pointer" }}
+              ></i>
             </nav>
           </div>
         </div>
