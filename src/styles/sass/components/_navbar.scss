@@ -6,8 +6,9 @@
     padding-left: 8px;
     padding-right: 8px;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     @extend %flexbox !optional;
+
     list-style: none;
     li {
       margin-left: 30px;
@@ -21,8 +22,17 @@
         align-items: center;
         @extend %flexbox !optional;
         @extend %si-regularFF !optional;
+        @include transition(0.3s);
         @media screen and (min-width: $media-tablets-min) {
           height: 100%;
+        }
+        &.get_started {
+          background-color: var(--neutral-3);
+          color: var(--neutral-2) !important;
+          padding: 8px 25px;
+          &:hover {
+            background-color: #4aa3df;
+          }
         }
 
         &.active {
