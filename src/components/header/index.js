@@ -11,21 +11,25 @@ const navigationLinks = [
     id: 1,
     href: "/",
     text: "Home",
+    additional_classname: "",
   },
   {
     id: 2,
     href: "/about",
     text: "About",
+    additional_classname: "",
   },
   {
     id: 3,
     href: "/#services",
     text: "Services",
+    additional_classname: "",
   },
   {
     id: 4,
     href: "/contact",
     text: "Contact Us",
+    additional_classname: "get_started",
   },
 ];
 
@@ -46,18 +50,28 @@ const Header = () => {
                 </>
               }
             />
-            <nav>
+            <nav className="navbar">
               <ul>
-                {navigationLinks.map(({ id, href, text }) => (
-                  <li key={id}>
-                    <Link
-                      className={pathname === href ? "active" : ""}
-                      href={href}
-                    >
-                      {text}
-                    </Link>
-                  </li>
-                ))}
+                {navigationLinks.map(
+                  ({ id, href, text, additional_classname }) => (
+                    <li key={id}>
+                      <Link
+                        className={
+                          pathname === href
+                            ? `active ${
+                                additional_classname != ""
+                                  ? additional_classname
+                                  : ""
+                              }`
+                            : ""
+                        }
+                        href={href}
+                      >
+                        {text}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </nav>
           </div>

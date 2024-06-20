@@ -17,11 +17,13 @@ $image-version: "0.0";
   --primary-1: hsl(250, 90%, 15%);
   --primary-2: hsl(328, 100%, 50%);
   --primary-3: hsl(225, 100%, 19%);
+
   /* secondary */
   --secondary-1: hsl(247, 100%, 57%);
   --secondary-2: hsl(165, 100%, 44%);
   --secondary-3: hsl(248, 100%, 96%);
   --secondary-4: hsl(328, 100%, 95%);
+
   /* neutral */
   --neutral-1: hsl(0, 0%, 13%);
   --neutral-2: hsl(0, 0%, 100%);
@@ -32,6 +34,7 @@ $image-version: "0.0";
   --neutral-7: hsl(0, 0%, 96%);
   --neutral-8: hsl(0, 0%, 80%);
   --ourClient-bg: hsl(204, 71%, 97%);
+
   /* background */
   --background-1: hsl(250, 90%, 15%);
   --background-2: hsl(225, 100%, 19%);
@@ -68,7 +71,7 @@ $image-version: "0.0";
 
   /* navbar */
   --nav-bg: transparent;
-  --nav-text: hsla(248, 48%, 91%, 1);
+  --nav-text: hsla(0%, 0%, 33%, 1);
   --nav-active-bg: hsla(328, 100%, 50%, 1);
   --nav-active-text: hsla(0, 0%, 100%, 1);
 
@@ -112,25 +115,7 @@ $image-version: "0.0";
 
   // Base64 Img
   --select-box-icon: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACZSURBVHgB7Y0xCgIxEEUnKxHcGBIkgTQucwSv4Em8ikfwCHqS2Fp6ArfcchYhTYqYgEUKFfvdB8PMfObPB5j5yqJerO0eQigKYbzXutYOpdx4Ida3EJ5D0Zr6ICW45HbODw61ifOlL3OMvP+YmJOubasYY3CSUo2cr4a3iWJs9kQ9wS+M6Y45NZUyZuu1Rg3/4hyitbiDCfMCHFoncsdK4HgAAAAASUVORK5CYII=");
-
-  // Images/Patterns
-
-  // --fantastic_fours-bg: url(../images/boosters/booster-bg/fantastic_fours.svg?v=#{$image-version})
-  //   no-repeat round($number: 0) center/contain;
 }
-
-//Event theme
-// .event-theme {
-//   :root {
-//     --theme-default: #d2091b;
-//     --theme-default-rgb: 210, 9, 27;
-//   }
-// }
-
-// .si-white-theme {
-//   :root {
-//   }
-// }
 
 // mobile ex-small
 $media-mobile-ex-sm-min: 320px;
