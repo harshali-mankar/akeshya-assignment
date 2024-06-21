@@ -2,7 +2,7 @@
 import React from "react";
 import SectionHeading from "../sectionHeading";
 import SectionCaption from "../sectionCaption";
-
+import { motion } from "framer-motion";
 const servicesArr = [
   {
     title: "Design",
@@ -32,7 +32,13 @@ const OurProcess = () => {
         <div className="main__container">
           <SectionHeading heading="OUR PROCESS" />
           <SectionCaption content="Over the years we’ve evolved a tested method for attaining achievement for each one of our clients." />
-          <div className="services__list">
+          <motion.div
+            className="services__list"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             {servicesArr.map((item, index) => (
               <div className="services__box" key={index}>
                 <h3 className="services__box-title">
@@ -43,7 +49,7 @@ const OurProcess = () => {
                 <p className="services__box-content">{item.content}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

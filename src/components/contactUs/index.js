@@ -3,7 +3,7 @@ import React from "react";
 import SectionHeading from "../sectionHeading";
 import Anchor from "../anchor";
 import ContactUsForm from "../contactUsForm";
-
+import { motion } from "framer-motion";
 const ContactUs = () => {
   return (
     <>
@@ -11,7 +11,13 @@ const ContactUs = () => {
         <div className="main__container">
           <SectionHeading heading="CONTACT US" />
           <div className="contactUs__grid">
-            <div className="contactUs__grid-lhs">
+            <motion.div
+              className="contactUs__grid-lhs"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <div className="contactUs__brand">
                 <h2 className="contactUs__brand-title">Akeshya</h2>
                 <p>
@@ -19,7 +25,7 @@ const ContactUs = () => {
                   solutions according to your needs,
                 </p>
               </div>
-            </div>
+            </motion.div>
             <div className="contactUs__grid-mid">
               <div className="contactUs__info">
                 <ul>
@@ -49,9 +55,15 @@ const ContactUs = () => {
                 </ul>
               </div>
             </div>
-            <div className="contactUs__grid-rhs">
+            <motion.div
+              className="contactUs__grid-rhs"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <ContactUsForm />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -193,7 +193,7 @@ a {
     text-align: center;
     color: var(--neutral-1);
     font-size: 2.8rem;
-    @extend %si-boldFF !optional;
+    font-weight: var(--bold-ff);
     @media screen and (min-width: $media-mobile-min) {
       font-size: 3.2rem;
       margin-bottom: 1em;

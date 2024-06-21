@@ -39,14 +39,20 @@ const Stats = () => {
       <section className="stats__wrap">
         <div className="main__container">
           <div className="stats__grid">
-            <div className="stats__grid-lhs">
+            <motion.div
+              className="stats__grid-lhs"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
               <div className="stats__thumb">
                 <Image src={statsThumb} alt={statsThumb} />
               </div>
-            </div>
+            </motion.div>
             <motion.div
               className="stats__grid-rhs"
-              initial={{ opacity: 0, x: 200 }}
+              initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}

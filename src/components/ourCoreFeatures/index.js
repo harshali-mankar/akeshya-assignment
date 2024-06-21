@@ -2,7 +2,7 @@
 import React from "react";
 import SectionHeading from "../sectionHeading";
 import SectionCaption from "../sectionCaption";
-
+import { motion } from "framer-motion";
 const ourCoreFeaturesArr = [
   {
     icon: "ri-window-line",
@@ -75,7 +75,14 @@ const OurCoreFeatures = () => {
           <SectionCaption content="Akeshya is a forward-thinking and intelligent design firm that is technically and creatively capable of transforming your brand into its best digital self. Our approach to design and development results in compelling, engaging branding and immersive digital experiences that provide a value for money." />
           <div className="ourCoreFeatures__list">
             {ourCoreFeaturesArr.map((item, index) => (
-              <div className="ourCoreFeatures__box" key={index}>
+              <motion.div
+                className="ourCoreFeatures__box"
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <div
                   className="ourCoreFeatures__box-icon"
                   style={{ color: item.iconColor }}
@@ -83,7 +90,7 @@ const OurCoreFeatures = () => {
                   <i className={item.icon}></i>
                 </div>
                 <h3 className="ourCoreFeatures__box-title">{item.title}</h3>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

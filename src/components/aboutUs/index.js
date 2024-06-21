@@ -2,14 +2,20 @@
 import React from "react";
 import SectionHeading from "../sectionHeading";
 import CtaButton from "@/components/ctaButton";
-
+import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <>
       <section className="aboutUs__wrap section__wrap">
         <div className="main__container">
           <SectionHeading heading="ABOUT US" />
-          <div className="aboutUs__content">
+          <motion.div
+            className="aboutUs__content"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             <p>
               We are Akeshya, a firm that specializes in web design and
               marketing. We help transform ideas into reality with a team of
@@ -43,7 +49,7 @@ const AboutUs = () => {
               btnText={"Learn More"}
               onClickProp={() => {}}
             />
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
